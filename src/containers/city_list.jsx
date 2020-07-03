@@ -6,11 +6,6 @@ import React, { Component } from "react";
 import City from "./city";
 
 class CityList extends Component {
-
-  // handleClick = () => {
-  //   console.log('Click:');
-  // }
-
   render() {
     return (
       <div className="cities">
@@ -20,7 +15,8 @@ class CityList extends Component {
             name={city.name}
             address={city.address}
             slug={city.slug}
-            clicked1={this.props.clicked}
+            selectCity={this.props.selectCity}
+            id={city.slug}
           />
         ))}
       </div>
