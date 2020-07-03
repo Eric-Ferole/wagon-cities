@@ -11,8 +11,8 @@ class SelectedCity extends Component {
     return (
       <div>
         {console.log(this.props.cities)}
-        <h2>{this.props.name}</h2>
-        <p>{this.props.address}</p>
+        <h2>{this.props.selectedCity.name}</h2>
+        <p>{this.props.selectedCity.address}</p>
       </div>
     );
   }
