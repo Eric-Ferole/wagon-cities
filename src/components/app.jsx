@@ -13,18 +13,21 @@ const cities = [
 
 class App extends Component {
   state = {
-    selectedCity: true
+    selectedCity: null,
+    selectedCityId: null
   }
 
-  handleClick = (event) => {
-    console.log('event:', event.target.value);
+  selectCity = (id) => {
+    this.setState({
+      selectedCityId: id
+    });
   }
 
   render() {
     return (
       <div className="app">
-        <CityList cities={cities} clicked={() => this.handleClick(event)} />
-        <SelectedCity selected={this.state.selectedCity} />
+        <CityList cities={cities} selectCity={this.selectCity} />
+        <SelectedCity selectedCity={this.state.selectedCity} cities={cities} id={this.state.selectedCityId} />
       </div>
     );
   }
