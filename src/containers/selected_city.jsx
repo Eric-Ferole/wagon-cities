@@ -8,11 +8,14 @@ class SelectedCity extends Component {
     if (this.props.selectedCity === null) {
       return (<p>Please select a city</p>);
     }
-    this.props.cities.forEach(element => console.log(element.name));
+    const cities = this.props.cities.filter(element => element.name === this.props.id); // Return a list of arrays
+    console.log('selectedCityId:', this.props.id);
+    console.log('city:', cities);
+    // cities.filter('id === selectedCityIf');
 
     return (
       <div>
-        {console.log(this.props.citie)}
+        {console.log()}
         {/* <h2>{this.props.selectCity.name}</h2>
         <p>{this.props.selectCity.address}</p> */}
       </div>
