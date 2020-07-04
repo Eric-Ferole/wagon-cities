@@ -13,8 +13,8 @@ const cities = [
 
 class App extends Component {
   state = {
-    selectedCity: null,
-    selectedCityId: null
+    selectedCity: true,
+    selectedCityId: 'London'
   }
 
   selectCity = (id) => {
