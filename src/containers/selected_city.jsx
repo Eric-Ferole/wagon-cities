@@ -8,11 +8,9 @@ class SelectedCity extends Component {
     // if (!this.props.selectedCity === null) {
     //   return (<p>Please select a city</p>);
     // }
+    console.log('Ville de nuit:', this.props.cities);
     const city = this.props.cities.filter(element => element.name === this.props.id); // Return a list of arrays
     console.log('selectedCityId:', this.props.id);
-    console.log('City:', typeof city, city);
-    // cities.filter('id === selectedCityIf');
-    console.log('test:', city);
 
     return (
       <div>
