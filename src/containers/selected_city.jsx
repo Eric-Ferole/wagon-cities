@@ -4,13 +4,10 @@ import React, { Component } from 'react';
 class SelectedCity extends Component {
 
   render() {
-    // console.log('SelectedCity:', this.props.selectedCity);
-    // if (!this.props.selectedCity === null) {
-    //   return (<p>Please select a city</p>);
-    // }
-    console.log('Ville de nuit:', this.props.cities);
-    const city = this.props.cities.filter(element => element.name === this.props.id); // Return a list of arrays
-    console.log('selectedCityId:', this.props.id);
+    if (!this.props.selectedCity) {
+      return (<p>Please select a city</p>);
+    }
+    const city = this.props.cities.filter(element => element.slug === this.props.id); // Return a list of arrays
 
     return (
       <div>
