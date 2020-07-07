@@ -13,13 +13,14 @@ const cities = [
 
 class App extends Component {
   state = {
-    selectedCity: true,
+    selectedCity: false,
     selectedCityId: 'London'
   }
 
   selectCity = (id) => {
     this.setState({
-      selectedCityId: id
+      selectedCityId: id,
+      selectedCity: true
     });
   }
 
