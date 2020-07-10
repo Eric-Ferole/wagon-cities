@@ -9,6 +9,15 @@ body {
   display: flex;
   .cities {
     width: 30%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
   }
   .active-city {
     width: 70%;
@@ -20,6 +29,9 @@ body {
     h3 {
       margin-top: 0;
     }
+  }
+  img {
+    width: 100%;
   }
 }
 

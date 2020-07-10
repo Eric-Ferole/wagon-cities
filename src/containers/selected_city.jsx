@@ -5,14 +5,19 @@ class SelectedCity extends Component {
 
   render() {
     if (!this.props.selectedCity) {
-      return (<p>Please select a city</p>);
+      return (
+        <div className="active-city">
+          <p>Please select a city</p>
+        </div>);
     }
     const city = this.props.cities.filter(element => element.slug === this.props.id); // Return a list of arrays
+    const url = "https://kitt.lewagon.com/placeholder/cities/";
 
     return (
-      <div>
+      <div className="active-city">
         <h2>{city[0].name}</h2>
         <p>{city[0].address}</p>
+        <img src={url + this.props.id} alt=""/>
       </div>
     );
   }
