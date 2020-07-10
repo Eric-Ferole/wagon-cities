@@ -9,10 +9,12 @@ class City extends Component {
     }
   }
 
-
   render() {
+
     return (
-      <li onClick={this.handleClick}>{this.props.name}</li>
+      <ul><li onClick={this.handleClick}>{this.props.name}</li></ul>
+      
+
     );
   }
 }
